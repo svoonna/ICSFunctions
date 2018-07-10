@@ -24,6 +24,7 @@
           <ExtensionPoint xsi:type="CustomFunctions">
             <Script>
               <SourceLocation resid="JS-URL" />
+              <SourceLocation resid="JS-URL1" />
             </Script>
             <Page>
               <SourceLocation resid="HTML-URL"/>
@@ -40,6 +41,7 @@
       <bt:Urls>
         <bt:Url id="JSON-URL" DefaultValue="https://icscustomfunctions.azurewebsites.net/customfunctions.json" />
         <bt:Url id="JS-URL" DefaultValue="https://icscustomfunctions.azurewebsites.net/customfunctions.js" />
+        <bt:Url id="JS-URL1" DefaultValue="https://icscustomfunctions.azurewebsites.net/ICSfunctions.js" />
         <bt:Url id="HTML-URL" DefaultValue="https://icscustomfunctions.azurewebsites.net/ICSfunctions.html" />
       </bt:Urls>
       <bt:ShortStrings>
