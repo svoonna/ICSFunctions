@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>a4b7679d-7758-48a7-8bf3-7fb37fc2f20b</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Tsuyoshi Matsuzaki</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="My test functions" />
+  <Description DefaultValue="custom functions test" />
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://example.com/mypage.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <AllFormFactors>
+          <ExtensionPoint xsi:type="CustomFunctions">
+            <Script>
+              <SourceLocation resid="functionsjs" />
+              <SourceLocation resid="chancejs" />
+            </Script>
+            <Page>
+              <SourceLocation resid="pagehtml"/>
+            </Page>
+          </ExtensionPoint>
+        </AllFormFactors>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Urls>
+        <bt:Url id="functionsjs" DefaultValue="https://icscustomfunctions.azurewebsites.net/myfunc.js" />
+        <bt:Url id="chancejs" DefaultValue="https://icscustomfunctions.azurewebsites.net/chance.js" />
+        <bt:Url id="pagehtml" DefaultValue="https://icscustomfunctions.azurewebsites.net/mypage.html" />
+      </bt:Urls>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
