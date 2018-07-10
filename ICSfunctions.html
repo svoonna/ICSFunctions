@@ -7,7 +7,15 @@
     <title></title>
     <script src="https://appsforoffice.edog.officeapps.live.com/lib/beta/hosted/office.js" type="text/javascript"></script>
     <script src="https://icscustomfunctions.azurewebsites.net/customfunctions.js" type="text/javascript"></script>
-    <script src="https://icscustomfunctions.azurewebsites.net/ICSfunctions.js" type="text/javascript"></script>
+    <!--<script src="https://icscustomfunctions.azurewebsites.net/ICSfunctions.js" type="text/javascript"></script>-->
+    <script type="text/javascript">
+        (function () {
+            "use strict";
+            Office.initialize = function (reason) {
+                return Excel.CustomFunctions.initialize();
+            };
+        })();
+    </script>
 </head>
 <body>
 </body>
