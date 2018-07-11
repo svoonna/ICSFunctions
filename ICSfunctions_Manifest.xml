@@ -10,6 +10,11 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="ICS Custom Functions" />
   <Description DefaultValue="ICS custom functions sample" />
+  <AppDomains>
+    <AppDomain>https://icscustomfunctions.azurewebsites.net</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+    <AppDomain>AppDomain3</AppDomain>
+  </AppDomains>
   <Hosts>
     <Host Name="Workbook" />
   </Hosts>
